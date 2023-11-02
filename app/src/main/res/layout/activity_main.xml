@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20sp"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/text_url"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Web Url: "
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_inputUrl"/>
+
+            <EditText
+                android:id="@+id/text_inputUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="https_url"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text_url"/>
+
+            <Button
+                android:id="@+id/button_browser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browes"
+                android:textSize="16sp"
+                app:layout_constraintTop_toTopOf="@id/text_inputUrl"
+                app:layout_constraintStart_toEndOf="@id/text_inputUrl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/text_inputUrl"/>
+            <TextView
+                android:id="@+id/text_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone No: "
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_url"
+                app:layout_constraintEnd_toStartOf="@id/edittext_phonenumber"/>
+
+
+            <EditText
+                android:id="@+id/edittext_phonenumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:text="+91 9426228994"
+                app:layout_constraintStart_toEndOf="@id/text_call"
+                app:layout_constraintEnd_toStartOf="@+id/button_call"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_call"/>
+
+            <Button
+                android:id="@id/button_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="call"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/button_browser"
+                app:layout_constraintStart_toEndOf="@id/edittext_phonenumber"
+                app:layout_constraintBaseline_toBaselineOf="@id/edittext_phonenumber"
+                />
+
+            <TextView
+                android:id="@+id/text_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Log: "
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_call"/>
+
+            <Button
+                android:id="@+id/button_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call Log"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_call"
+                app:layout_constraintBaseline_toBaselineOf="@id/text_log"/>
+
+            <TextView
+                android:id="@+id/text_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery: "
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_log"/>
+
+            <Button
+                android:id="@+id/button_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_log"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gallery"/>
+
+            <TextView
+                android:id="@+id/text_cemera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cemera: "
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_gallery"/>
+
+            <Button
+                android:id="@+id/button_cemera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cemera"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_gallery"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_cemera"/>
+
+            <TextView
+                android:id="@+id/text_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm: "
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_cemera"/>
+
+            <Button
+                android:id="@+id/button_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/button_cemera"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_alarm"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
